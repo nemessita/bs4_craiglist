@@ -1,0 +1,64 @@
+[
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "BeautifulSoup",
+        "importPath": "bs4",
+        "description": "bs4",
+        "isExtraImport": true,
+        "detail": "bs4",
+        "documentation": {}
+    },
+    {
+        "label": "URL",
+        "kind": 5,
+        "importPath": "new",
+        "description": "new",
+        "peekOfCode": "URL = \"https://sfbay.craigslist.org/search/los-gatos-ca/cta?lat=37.1836&lon=-121.95&max_price=10000&min_auto_year=2014&search_distance=18#search=1~gallery~0~0\"\npage = requests.get(URL)\nsoup = BeautifulSoup(page.content, 'html.parser')\n# parsing gosterilmis link uzre\nresult = soup.find(class_=\"cl-static-search-results\")\ncar_element = result.find_all('li', class_='cl-static-search-result')\nfor car_elem in car_element:\n    title_elem = car_elem.find('div', class_='title') # title\n    price_elem = car_elem.find('div', class_='price') #qiymet\n    location_elem = car_elem.find('div', class_='location') # location",
+        "detail": "new",
+        "documentation": {}
+    },
+    {
+        "label": "page",
+        "kind": 5,
+        "importPath": "new",
+        "description": "new",
+        "peekOfCode": "page = requests.get(URL)\nsoup = BeautifulSoup(page.content, 'html.parser')\n# parsing gosterilmis link uzre\nresult = soup.find(class_=\"cl-static-search-results\")\ncar_element = result.find_all('li', class_='cl-static-search-result')\nfor car_elem in car_element:\n    title_elem = car_elem.find('div', class_='title') # title\n    price_elem = car_elem.find('div', class_='price') #qiymet\n    location_elem = car_elem.find('div', class_='location') # location\n    url_elem = car_elem.find('a', href=True)['href'] #url gosterir",
+        "detail": "new",
+        "documentation": {}
+    },
+    {
+        "label": "soup",
+        "kind": 5,
+        "importPath": "new",
+        "description": "new",
+        "peekOfCode": "soup = BeautifulSoup(page.content, 'html.parser')\n# parsing gosterilmis link uzre\nresult = soup.find(class_=\"cl-static-search-results\")\ncar_element = result.find_all('li', class_='cl-static-search-result')\nfor car_elem in car_element:\n    title_elem = car_elem.find('div', class_='title') # title\n    price_elem = car_elem.find('div', class_='price') #qiymet\n    location_elem = car_elem.find('div', class_='location') # location\n    url_elem = car_elem.find('a', href=True)['href'] #url gosterir\n    print(title_elem.text.strip())",
+        "detail": "new",
+        "documentation": {}
+    },
+    {
+        "label": "result",
+        "kind": 5,
+        "importPath": "new",
+        "description": "new",
+        "peekOfCode": "result = soup.find(class_=\"cl-static-search-results\")\ncar_element = result.find_all('li', class_='cl-static-search-result')\nfor car_elem in car_element:\n    title_elem = car_elem.find('div', class_='title') # title\n    price_elem = car_elem.find('div', class_='price') #qiymet\n    location_elem = car_elem.find('div', class_='location') # location\n    url_elem = car_elem.find('a', href=True)['href'] #url gosterir\n    print(title_elem.text.strip())\n    print(price_elem.text.strip())\n    print(location_elem.text.strip())",
+        "detail": "new",
+        "documentation": {}
+    },
+    {
+        "label": "car_element",
+        "kind": 5,
+        "importPath": "new",
+        "description": "new",
+        "peekOfCode": "car_element = result.find_all('li', class_='cl-static-search-result')\nfor car_elem in car_element:\n    title_elem = car_elem.find('div', class_='title') # title\n    price_elem = car_elem.find('div', class_='price') #qiymet\n    location_elem = car_elem.find('div', class_='location') # location\n    url_elem = car_elem.find('a', href=True)['href'] #url gosterir\n    print(title_elem.text.strip())\n    print(price_elem.text.strip())\n    print(location_elem.text.strip())\n    print(url_elem)",
+        "detail": "new",
+        "documentation": {}
+    }
+]
